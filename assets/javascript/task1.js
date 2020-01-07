@@ -1,6 +1,7 @@
 /* Put code for the task below */
-function functionName(){
-	alert("Run My Stuff");
-	
-	
+function buttonAppear(){
+  document.getElementById("buttonTask1").style.display = "inline";
+}
+function imgDisappear(){
+  document.getElementById("imageTask1").style.display = "none";
 }
