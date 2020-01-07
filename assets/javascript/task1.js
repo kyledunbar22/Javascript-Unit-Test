@@ -1,7 +1,7 @@
 /* Put code for the task below */
 function buttonAppear(){
-  document.getElementById('buttonTask1').style.display="block";
+  document.getElementById("buttonTask1").style.display = "inline";
 }
-function disappear(){
-  document.getElementById('imageTask1').style="disappear";
+function imgDisappear(){
+  document.getElementById("imageTask1").style.display = "none";
 }
