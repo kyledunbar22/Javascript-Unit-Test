@@ -26,7 +26,9 @@
 					<li><a href="#">Nav Link 6</a></li>
 					<li><a href="#">Nav Link 7</a></li>
 					<!-- Button for Task 3 should be placed here -->
-
+					<button type="button" id="changeText" onClick="changeText()">Click this button!</button>
+					<!-- Button for Task 5 -->
+					<button type="button" onClick="newPage()" id="newPage">Clear</button>
 				</ul>
 			</div>
 		</div>
@@ -62,15 +64,17 @@
 					<hr>
 
 					<h3>Task 1 - The Image</h3>
-					<img onmouseover="buttonAppear()" src="assets/img/compIcon.png" id="imageTask1"><br />
-					<button style="display:none" id="buttonTask1" onClick="disappear()">Click Me</button>
+					<img onmouseover="buttonAppear()" style="display:inline" src="assets/img/compIcon.png" id="imageTask1"><br />
+					<button style="display:none" id="buttonTask1" onClick="imgDisappear()">Click Me</button>
 					<hr>
 
 					<h3>Task 2 - The Table</h3>
 					<!-- Buttons for this task should be entered before the table tag. -->
+					<button type="button" onClick="Color1()">Orange</button>
+					<button type="button" onClick="Color2()">Pink</button>
+					<button type="button" onClick="Color3()">Yellow</button>
 
-
-					<table class="table table-striped">
+					<table class="table table-striped" id="tableNames">
 						<thead>
 							<tr>
 								<th>#</th>
@@ -102,32 +106,33 @@
 					</table>
 
 					<h3>Task 4 - Form</h3>
-					<table>
-						<thead>
+					<form name="dataForm" action="index.html" method="post">
+						<table>
+							<thead>
+								<tr>
+									<th colspan="2">Please Fill Out the Form Below</th>
+								</tr>
+							</thead>
 							<tr>
-								<th colspan="2">Please Fill Out the Form Below</th>
+								<td>Name:</td>
+								<td><input type="text" name="fullName" placeholder="Enter your full name." id="fullName" required></td>
 							</tr>
-						</thead>
-						<tr>
-							<td>Name:</td>
-							<td><input type="text" name="fullName" placeholder="Enter your full name." id="fullName"></td>
-						</tr>
-						<tr>
-							<td>Address:</td>
-							<td><input type="text" name="address" placeholder="Enter your address." id="address"></td>
-						</tr>
-						<tr>
-							<td>Phone:</td>
-							<td><input type="text" name="phone" placeholder="Enter your phone number." id="phone"></td>
-						<tr>
-							<td>Email:</td>
-							<td><input type="text" name="email" placeholder="Enter your email address." id="email"></td>
-						</tr>
-						<tr>
-							<td colspan="2"><button>Submit</button></td>
-						</tr>
-					</table>
-
+							<tr>
+								<td>Address:</td>
+								<td><input type="text" name="address" placeholder="Enter your address." id="address" required></td>
+							</tr>
+							<tr>
+								<td>Phone:</td>
+								<td><input type="text" name="phone" placeholder="Enter your phone number." id="phone" required></td>
+							<tr>
+								<td>Email:</td>
+								<td><input type="text" name="email" placeholder="Enter your email address." id="email" required></td>
+							</tr>
+							<tr>
+								<td colspan="2"><input type="submit" value="Submit" onClick="formCheck()"></td>
+							</tr>
+						</table>
+					</form>
 
 				</div>
 				<div class="aside">
@@ -138,7 +143,16 @@
 		</div>
 		<div class="footer">
 			<div class="container">
-				Template used for the basis of this project was obtained from "http://maxdesign.com.au/css-layouts/".  This is an example of citing your source!
+				<p>Template used for the basis of this project was obtained from "http://maxdesign.com.au/css-layouts/".  This is an example of citing your source!</p>
+
+				<p>- Some code in the Form part (task 4) came from the forms.html file in the Javascript2019 folder.</p>
+								- Most of the function code for Task 4 came from the forms.js file in the Javascript2019/js folder.<br><br>
+										- The "!=" (not equal) Javascript operator from Task 4 was obtained from "https://www.w3schools.com/jsref/jsref_operators.asp". This operator was used to show that if a phone number
+											did not have 10 characters, then an alert box would pop up.<br><br>
+
+				<p>- The .style.display property from task 1 was obtained from "https://www.w3schools.com/jsref/prop_style_display.asp".</p>
+
+				<p>- In Task 5, the window.open method was obtained from "https://www.w3schools.com/jsref/met_win_open.asp". This was used to open a browser tab/window.</p>
 			</div>
 		</div>
 	</body>
